@@ -4,7 +4,6 @@ class OneTwoController {
   async create (req, res) {
     try {
       const {one, two} = req.body
-      // const newOneTwo = await db.query(`INSERT INTO onetwo (one, two, date) values ($1, $2, $3) RETURNING *`, [one, two, Date.now()])
       const newOneTwo = await db.query(`INSERT INTO onetwo (one, two) values ($1, $2) RETURNING *`, [one, two])
       res.status(200).json(true)
     } catch (e) {
