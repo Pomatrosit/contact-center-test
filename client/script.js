@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <th scope="row">${ idx + 1}</th>
               <td>${el.one}</td>
               <td>${el.two}</td>
-              <td>${new Date(+el.date).toLocaleString()}</td>
+              <td>${new Date(el.date).toLocaleString()}</td>
             </tr>
           `
           tableBody.insertAdjacentHTML('beforeend', row)
